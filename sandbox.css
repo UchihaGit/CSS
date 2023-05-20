@@ -1,0 +1,236 @@
+button {
+  font-weight: bold;
+  margin: 0 15px 0 0;
+}
+
+.facebook-style-btn{
+  background-color: #4267b2;
+  border: 0;
+  outline: 0;
+  padding: 7px 8px;
+  color: white;
+  border-radius: 2px;
+  box-shadow: 3px 3px 5px 2px grey;
+  position: relative;
+  text-shadow: -1px -1px 2px border-left: ;
+}
+  .facebook-style-btn:hover{
+    background-color: #2b54a7;
+  }
+
+  .facebook-style-btn:active{
+    background-color: #1d4698;
+    box-shadow: 0;
+    bottom: 3px;
+    box-shadow: 1.5px 1.5px 2px 1px grey;
+  }
+
+.btn-3d-1{
+  position: relative;
+  padding: 15px 24px;
+  background-color: orangered;
+  border: 0px;
+  color: white;
+  box-shadow: -3px 3px 1px hsl(16,100%,30%);
+  outline: none;
+}
+
+  .btn-3d-1:active{
+
+    box-shadow: -1.5px 1.5px 1px hsl(16,100%,30%);
+    left: -3px;
+    top: 3px;
+
+  }
+
+  .btn-3d-1::before{
+    position: absolute;
+    content: '';
+    display: block;
+    border: solid 3px transparent;
+    border-right: solid 3px hsl(16,100%,30%);
+    border-left-width: 0px;
+    left: -3px;
+    top:0px;
+  }
+
+  .btn-3d-1::after{
+    position: absolute;
+    content: '';
+    display: block;
+    border: solid 3px transparent;
+    border-top: solid 3px hsl(16,100%,30%);
+    border-bottom-width: 0px;
+    right:0px;
+    bottom:-3px;
+  }
+
+  .btn-3d-1:active::before{
+    border: solid 1.5px transparent;
+    border-right: solid 1.5px hsl(16,100%,30%);
+  }
+
+  .btn-3d-1:active::after{
+    border: solid 1.5px transparent;
+    border-top: solid 1.5px hsl(16,100%,30%);
+  }
+
+.btn-3d-2{
+  background: -webkit-radial-gradient(yellow,yellow);
+  background: -o-radial-gradient(yellow,yellow);
+  background: -moz-radial-gradient(yellow,yellow);
+  background: radial-gradient(yellow,yellow);
+  background: #ecd300; /* For browsers that do not support gradients */
+  outline: none;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  border: none;
+  position: relative;
+
+  box-shadow: 0 2px 2px black,
+              0 3px 3px black,
+              0 4px 4px black,
+              0 5px 5px black,
+              0 6px 6px black;
+}
+
+  .btn-3d-2:hover{
+    background: radial-gradient(hsl(54,100%,45%),hsl(54,100%,35%));
+  }
+
+  .btn-3d-2:active{
+    background: radial-gradient(hsl(54,100%,35%),hsl(54,100%,25%));
+    top:2px;
+    box-shadow: 0 1px 2px black,
+                0 1.5px 3px black,
+                0 2px 4px black,
+                0 2.5px 5px black,
+                0 3px 6px black;
+  }
+
+.gradient-button-1{
+  border: 10px solid transparent;
+  background-color: #e7eef1;
+  padding: 20px 40px;
+  border-image: linear-gradient(to top right, orangered, yellow);
+  border-image-slice:1;
+  box-sizing: border-box;
+  xdisplay:inline-block;
+  z-index: 1;
+  outline: none;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+  .gradient-button-1:hover{
+    color:white;
+    background: linear-gradient(to top right, orangered, yellow);
+  }
+
+.gradient-button-2{
+  border: 10px solid transparent;
+  background-color: #e7eef1;
+  padding: 20px 40px;
+  border-image: linear-gradient(to right, orangered, transparent);
+  border-image-slice:1;
+  box-sizing: border-box;
+  xdisplay:inline-block;
+  z-index: 1;
+  outline: none;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+  .gradient-button-2:hover{
+     xbackground-size: 100%;
+    color:white;
+    background-image: linear-gradient(to right, orangered, transparent);
+    border-right-style: none;
+  }
+
+.animated-button-1{
+  background-image: url(pattern.png);
+  outline: none;
+  padding: 20px 40px;
+  color: white;
+  border: none;
+}
+
+  .animated-button-1:hover{
+    animation: btnAnimate 2s linear infinite;
+  }
+
+
+  @keyframes btnAnimate {
+    from{
+      background-position: 0 0;
+    }
+    to{
+      background-position: 40px 0;
+    }
+  }
+
+.animated-button-2{
+  position: relative;
+  display: inline-block;
+  background-color: #00b3b4;
+
+  outline: none;
+  padding: 20px 40px;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+  .animated-button-2::after{
+    content: "»";
+    top:30%;
+    opacity: 0;
+  }
+
+  .animated-button-2:hover{
+    padding: 20px 60px 20px 20px;/*clockwise top right bottom left*/
+  }
+
+  .animated-button-2:hover:after{
+    opacity: 1;
+  }
+
+.toggle-1{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+}
+
+.toggle-1__input{
+  display: none;
+}
+
+.toggle-1__button{
+  position: relative;
+  display: inline-block;
+  background-color: #f2395a;
+  width: 80px;
+  height: 30px;
+}
+
+.toggle-1__button::before{
+  position: absolute;
+  content: "off";
+  background-color: white;
+  top:6px;
+  left: 50px;
+  padding: 0 3px;
+  color: #f2395a;
+}
+
+.toggle-1__button::before{
+  position: absolute;
+  content: "off";
+  background-color: white;
+  top:6px;
+  left: 50px;
+  padding: 0 3px;
+  color: #f2395a;
+}
